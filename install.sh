@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 APP_NAME="pse"
 SCRIPT_URL="https://raw.githubusercontent.com/hctilg/pse/main/strength.sh"
