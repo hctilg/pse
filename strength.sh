@@ -105,6 +105,28 @@ evaluate_password_strength() {
   [[ "$password" =~ (.).*\1.*\1 ]] && echo "- Avoid repeating characters"
 }
 
+if [[ "${1,,}" == "--uninstall" ]]; then
+  read -rp "Do you want to continue? (yes/No) > " answer
+
+  if [[ ${answer,,} != "yes" ]]; then
+    exit 1
+  fi
+
+  echo -e "\n[#] Uninstaling..."
+  
+  if [[ $(uname -o) == "Android" ]]; then # Termux
+    rm -rf "/data/data/com.termux/files/usr/bin/pse"
+  else
+    sudo rm -rf "/usr/local/bin/pse"
+  fi
+
+  wait
+
+  echo -e "\n[#] Done."
+
+  exit;
+fi
+
 # Prompt user for password input securely (no echo)
 read -s -p "Please enter your password: " password
 echo -e "\n"
