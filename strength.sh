@@ -57,10 +57,10 @@ evaluate_password_strength() {
   fi
 
   # Load common passwords from `~/common_passwords.txt` into an array
-  if [ -f "~/common_passwords.txt" ]; then
-    mapfile -t common_passwords < "~/common_passwords.txt"
+  if [ -f "$HOME/common_passwords.txt" ]; then
+    mapfile -t common_passwords < "$HOME/common_passwords.txt"
   else
-    echo "Error: ~/common_passwords.txt file not found!"
+    echo "Error: $HOME/common_passwords.txt file not found!"
     exit 1
   fi
 
@@ -116,10 +116,10 @@ if [[ "${1,,}" == "--uninstall" ]]; then
   
   if [[ $(uname -o) == "Android" ]]; then # Termux
     rm -rf "/data/data/com.termux/files/usr/bin/pse"
-    rm -rf "~/common_passwords.txt"
+    rm -rf "$HOME/common_passwords.txt"
   else
     sudo rm -rf "/usr/local/bin/pse"
-    sudo rm -rf "~/common_passwords.txt"
+    sudo rm -rf "$HOME/common_passwords.txt"
   fi
 
   wait
