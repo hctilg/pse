@@ -1,5 +1,7 @@
 # Password Strength Evaluator
 
+![screenshot.png](screenshot.png)
+
 This Bash script provides a comprehensive tool to evaluate the strength of a password by calculating its entropy, assigning a security score, and offering tailored improvement suggestions. It combines cryptographic principles (entropy calculation) with practical heuristics (variety bonuses and penalties) to deliver an in-depth analysis.
 
 #### [How do I install it?](#installation)
