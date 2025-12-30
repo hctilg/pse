@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 APP_NAME="pse"
 SCRIPT_URL="https://raw.githubusercontent.com/hctilg/pse/main/strength.sh"
@@ -24,7 +23,7 @@ else
 fi
 
 echo -e "\n  [#] Downloading common passwords..."
-curl -s -o "~/common_passwords.txt" "$CPS_URL"
+curl -s -o "~/common_passwords.txt" "$CPS_URL" 
 
 echo -e "\n  [#] Installation completed !"
 echo -e "\n - You can now run the script with the command '$APP_NAME'.\n"
