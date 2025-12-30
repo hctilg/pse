@@ -121,7 +121,7 @@ Run the app-script from the terminal:
 ## Customization
 
 - **Adjust Scoring**: Modify weights (e.g., entropy cap, length bonus formula) to suit your security policy.
-- **Expand Common Passwords**: Add more entries to the [`common_passwords`](common_passwords.txt) array.
+- **Expand Common Passwords**: Add more entries to the `~/common_passwords.txt` array.
 - **Character Pool**: Adjust the `pool_size` increments in `calculate_entropy` for different character sets.
 
 # Uninstall
@@ -136,9 +136,11 @@ This script is released under the [MIT License](LICENSE). Feel free to modify an
 
 ## Contributing
 
-Suggestions and pull requests are welcome! Please submit feedback or improvements via GitHub (if hosted) or directly to the author.
+Suggestions and pull requests are welcome!
+
+Please submit feedback or improvements via GitHub (if hosted) or directly to the author.
 
 <br>
 
 > [!NOTE]
-> The [README](README.md) and [Code-Comments](strength.sh) were revised using Grok  3.
+> The  [README](README.md)  and  [Code-Comments](strength.sh)  were revised using Grok  3.
