@@ -2,6 +2,8 @@
 
 This Bash script provides a comprehensive tool to evaluate the strength of a password by calculating its entropy, assigning a security score, and offering tailored improvement suggestions. It combines cryptographic principles (entropy calculation) with practical heuristics (variety bonuses and penalties) to deliver an in-depth analysis.
 
+#### [How do I install it?](#installation)
+
 ## Features
 
 - **Entropy Calculation**: Measures password strength in bits using the formula `log2(pool_size^length)`.
@@ -51,23 +53,35 @@ This Bash script provides a comprehensive tool to evaluate the strength of a pas
 
 ## Installation
 
-1. Save the script to a file (e.g., `password_strength.sh`).
-2. Make it executable:
-   ```bash
-   chmod +x password_strength.sh
-   ```
-3. Ensure `bc` is installed:
+**PSE** by running one of the following commands in your terminal.
+
+You can install this via the command-line with either `curl` or `wget`.
+
+#### via curl
+
+```shell
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/hctilg/pse/main/install.sh)"
+```
+
+#### via wget
+
+```shell
+bash -c "$(wget https://raw.githubusercontent.com/hctilg/pse/main/install.sh -O -)"
+```
+
+#### Ensure `bc` is installed:
   - On Arch-Linux: `sudo pacman -S bc`
   - On Debian/Ubuntu: `sudo apt install bc`
   - On RedHat/Fedora: `sudo dnf install bc`
   - On macOS: Installed by default with Xcode tools.
+  - On Termux: `pkg i bc`
 
 ## Usage
 
-Run the script from the terminal:
-   ```bash
-   ./password_strength.sh
-   ```
+Run the app-script from the terminal:
+  ```bash
+  pse
+  ```
 - You will be prompted to enter a password (input is hidden).
 - The script will output a detailed analysis.
 
@@ -110,6 +124,12 @@ Run the script from the terminal:
 - **Expand Common Passwords**: Add more entries to the [`common_passwords`](common_passwords.txt) array.
 - **Character Pool**: Adjust the `pool_size` increments in `calculate_entropy` for different character sets.
 
+# Uninstall
+
+```bash
+pse --uninstall
+```
+
 ## License
 
 This script is released under the [MIT License](LICENSE). Feel free to modify and distribute it as needed.
@@ -118,5 +138,7 @@ This script is released under the [MIT License](LICENSE). Feel free to modify an
 
 Suggestions and pull requests are welcome! Please submit feedback or improvements via GitHub (if hosted) or directly to the author.
 
+<br>
+
 > [!NOTE]
-> This [README.md](README.md) and the code-comments have been rewritten with assistance from Grok 3.
+> The [README](README.md) and [Code-Comments](strength.sh) were revised using Grok  3.
