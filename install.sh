@@ -23,7 +23,7 @@ else
   sudo chmod +x "$INSTALL_PATH"
 fi
 
-echo -e "\n  [#] Downloading `common_passwords.txt`..."
+echo -e "\n  [#] Downloading common passwords..."
 curl -s -o "~/common_passwords.txt" "$CPS_URL"
 
 echo -e "\n  [#] Installation completed !"
